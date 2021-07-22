@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ydgSE490KhwIQSRGI0g/gEJ4RFNEy/o9ZKAT9O7oqErQosuGoSEQFzKQ5MIWMnhbznNlTeqi+ngPtzqQXICMEw==",
+  "success": true,
+  "projectFilePath": "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Api/OrderInfo.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/osmanpolat/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/osmanpolat/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/osmanpolat/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/osmanpolat/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/osmanpolat/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/osmanpolat/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
