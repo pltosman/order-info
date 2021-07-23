@@ -1,49 +1,20 @@
 ﻿<Properties StartupConfiguration="{FAFAE82F-9070-463C-A8E5-B9240E7DDFDD}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="OrderInfo.Core/DataAccess/IEntityRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OrderInfo.Business/Concrete/CustomerDetailService.cs">
     <Files>
-      <File FileName="OrderInfo.Business/Concrete/CustomerDetailService.cs" Line="26" Column="56" />
-      <File FileName="OrderInfo.Api.Tests/OrderInfoTests.cs" Line="72" Column="47" />
-      <File FileName="OrderInfo.Business/Concrete/OrderManager.cs" Line="25" Column="61" />
-      <File FileName="OrderInfo.Api/Controllers/OrderInfoController.cs" Line="63" Column="60" />
-      <File FileName="OrderInfo.Business/Concrete/OrderItemManager.cs" Line="39" Column="52" />
-      <File FileName="OrderInfo.Core/DataAccess/IEntityRepository.cs" Line="18" Column="49" />
+      <File FileName="OrderInfo.Api/appsettings.json" Line="21" Column="15" />
+      <File FileName="OrderInfo.DataAccess/Concrete/EntityFramework/Contexts/OrderInfoContext.cs" Line="5" Column="65" />
+      <File FileName="OrderInfo.Business/Concrete/CustomerDetailService.cs" Line="69" Column="64" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OrderInfo" expanded="True">
-            <Node name="OrderInfo.Api" expanded="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
-            <Node name="OrderInfo.Api.Tests" expanded="True" />
             <Node name="OrderInfo.Business" expanded="True">
-              <Node name="Abstract" expanded="True" />
-              <Node name="Concrete" expanded="True" />
-            </Node>
-            <Node name="OrderInfo.Core" expanded="True">
-              <Node name="DataAccess" expanded="True">
-                <Node name="IEntityRepository.cs" selected="True" />
+              <Node name="Concrete" expanded="True">
+                <Node name="CustomerDetailService.cs" selected="True" />
               </Node>
-              <Node name="Entities" expanded="True">
-                <Node name="Concrete" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="OrderInfo.Entities" expanded="True">
-              <Node name="Dtos" expanded="True" />
-              <Node name="ResponseModel" expanded="True" />
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>)</Value>
-          <Value>actual.Result</Value>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="OrderInfo" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
