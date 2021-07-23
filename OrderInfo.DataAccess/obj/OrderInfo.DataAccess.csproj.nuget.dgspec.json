@@ -4,6 +4,80 @@
     "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.DataAccess/OrderInfo.DataAccess.csproj": {}
   },
   "projects": {
+    "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Core/OrderInfo.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Core/OrderInfo.Core.csproj",
+        "projectName": "OrderInfo.Core",
+        "projectPath": "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Core/OrderInfo.Core.csproj",
+        "packagesPath": "/Users/osmanpolat/.nuget/packages/",
+        "outputPath": "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/osmanpolat/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.DataAccess/OrderInfo.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -25,7 +99,89 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Entities/OrderInfo.Entities.csproj": {
+                "projectPath": "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Entities/OrderInfo.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Entities/OrderInfo.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Entities/OrderInfo.Entities.csproj",
+        "projectName": "OrderInfo.Entities",
+        "projectPath": "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Entities/OrderInfo.Entities.csproj",
+        "packagesPath": "/Users/osmanpolat/.nuget/packages/",
+        "outputPath": "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Entities/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/osmanpolat/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Core/OrderInfo.Core.csproj": {
+                "projectPath": "/Users/osmanpolat/Projects/Interviews/MMT_Digitals/ecommerence/OrderInfo/OrderInfo.Core/OrderInfo.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

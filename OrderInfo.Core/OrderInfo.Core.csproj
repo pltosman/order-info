@@ -4,4 +4,38 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="DataAccess\" />
+    <None Remove="Utilities\" />
+    <None Remove="Utilities\Results\" />
+    <None Remove="Utilities\Messages\" />
+    <None Remove="Entities\" />
+    <None Remove="Entities\Concrete\" />
+    <None Remove="DataAccess\EntityFramework\" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="RestSharp" />
+    <None Remove="Utilities\Security\" />
+    <None Remove="Extentions\" />
+    <None Remove="Microsoft.AspNetCore.Mvc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAccess\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Utilities\Results\" />
+    <Folder Include="Utilities\Messages\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Entities\Concrete\" />
+    <Folder Include="DataAccess\EntityFramework\" />
+    <Folder Include="Utilities\Security\" />
+    <Folder Include="Extentions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.8" />
+    <PackageReference Include="RestSharp" Version="106.12.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Concrete\" />
+    <None Remove="Dtos\" />
+    <None Remove="Abstract\" />
+    <None Remove="ResponseModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Concrete\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Abstract\" />
+    <Folder Include="ResponseModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OrderInfo.Core\OrderInfo.Core.csproj" />
+  </ItemGroup>
+</Project>
