@@ -1,7 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using OrderInfo.Business.Abstract;
+using OrderInfo.Core.Utilities.Results;
 using OrderInfo.Entities.Dtos;
 
 namespace OrderInfo.Business.Concrete
@@ -24,29 +24,32 @@ namespace OrderInfo.Business.Concrete
             _customerDetailService = customerDetailService;
         }
 
-        public async Task<OrderInfoResponseModel> GetLastestOrder(string email, string customerId)
+        public async Task<IDataResult<OrderInfoResponseModel>> GetLastestOrder(string email, string customerId)
         {
 
-            OrderInfoResponseModel model = new OrderInfoResponseModel();
+            DataResult<OrderInfoResponseModel> model = new (null,false);
 
             _logger.LogInformation("Get Customer's Order Info method called");
 
-
             var customer = await _customerDetailService.GetCustomerDetail(email, customerId);
-
-            if (customer.Data != null)
+          
+            if (customer.Success)
             {
                 var latestOrder = _orderService.GetLatestOrderByCustomerId(customer.Data.CustomerId);
                 if (latestOrder.Data != null)
                 {
                     var orderItems = await _orderItemService.GetListWithProductsByOrderIdAsync(latestOrder.Data.OrderId);
 
-                    model = new OrderInfoResponseModel(customer.Data, latestOrder.Data, orderItems.Data);
+                    model = new (new OrderInfoResponseModel(customer.Data, latestOrder.Data, orderItems.Data),true);
                 }
                 else
                 {
-                    model = new OrderInfoResponseModel(customer.Data);
+                    model = new (new OrderInfoResponseModel(customer.Data),true);
                 }
+            }
+            else
+            {
+                model = new(null, customer.Success, customer.Message);
             }
 
             return model;

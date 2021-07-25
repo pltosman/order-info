@@ -47,13 +47,17 @@ namespace OrderInfo.Api.Controllers
 
             var result = await _orderInfoService.GetLastestOrder(request.User, request.CustomerId);
 
-            if (string.IsNullOrEmpty(result.Customer?.FirstName))
+            if(result.Success)
             {
-                return BadRequest(new Result(false,AspectMessages.InvalidRequest));
+                return Ok(result.Data);
             }
 
-            return Ok(result);
+            if(result.Message.Contains("NotFound"))
+            {
+                return NotFound(new Result(false, AspectMessages.NotFoundResult)); 
+            }
 
+            return BadRequest(new Result(false, AspectMessages.InvalidRequest));
         }
     }
 }

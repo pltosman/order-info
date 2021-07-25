@@ -42,16 +42,15 @@ namespace OrderInfo.Business.Concrete
 
             var response = await GetDetail(customerEmail);
 
-            if(response.Data == null)
+            if(!response.Success)
             {
-                return new DataResult<CustomerDetailResponse>(null, false, AspectMessages.InvalidRequest);
+                return new DataResult<CustomerDetailResponse>(null, false, AspectMessages.NotFoundResult);
             }
 
             if(!IsCustomerIdSame(customerId,response.Data.CustomerId))
             {
                 return new DataResult<CustomerDetailResponse>(null, false, AspectMessages.InvalidRequest);
             }
-
 
             return response;
         }

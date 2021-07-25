@@ -6,5 +6,7 @@ namespace OrderInfo.Core.Utilities.Messages
         public static string WrongValidationType = "Wrong Validation Type";
 
         public static string InvalidRequest = "Invaild Request";
+
+        public static string NotFoundResult = "NotFound Result";
     }
 }
