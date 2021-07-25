@@ -19,20 +19,15 @@ namespace OrderInfo.Api.Controllers
     [ApiController]
     public class OrderInfoController : ControllerBase
     {
-
+     
+        private readonly IOrderInfoService _orderInfoService;
         private readonly ILogger<OrderInfoController> _logger;
-        private readonly ICustomerDetailService _customerDetailService;
-        private readonly IOrderService _orderService;
-        private readonly IOrderItemService _orderItemService;
 
-        public OrderInfoController(ICustomerDetailService customerDetailService, IOrderService orderService, IOrderItemService orderItemService, ILogger<OrderInfoController> logger)
+        public OrderInfoController(IOrderInfoService orderInfoService, ILogger<OrderInfoController> logger)
         {
+            _orderInfoService = orderInfoService;
             _logger = logger;
-            _customerDetailService = customerDetailService;
-            _orderService = orderService;
-            _orderItemService = orderItemService;
         }
-
        
         [HttpPost()]
         [Produces("application/json")]
@@ -43,33 +38,21 @@ namespace OrderInfo.Api.Controllers
         public async Task<IActionResult> GetLastestOrder([FromBody] LastOrderDto request)
         {
 
-            OrderInfoResponseModel model = new OrderInfoResponseModel();
-
-            _logger.LogInformation("Get Customer's Order Info method called");
+            _logger.LogInformation("OrderInfo controller's method called");
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState.GetErrorMessage().ToString());
             }
 
-            var customer = await _customerDetailService.GetCustomerDetail(request.User, request.CustomerId);
+            var result = await _orderInfoService.GetLastestOrder(request.User, request.CustomerId);
 
-            if(customer.Data!= null)
+            if (string.IsNullOrEmpty(result.Customer?.FirstName))
             {
-
-                var latestOrder = _orderService.GetLatestOrderByCustomerId(customer.Data.CustomerId);
-                if(latestOrder.Data != null)
-                {
-                   var orderItems = await _orderItemService.GetListWithProductsByOrderIdAsync(latestOrder.Data.OrderId);
-
-                    model = new OrderInfoResponseModel(customer.Data, latestOrder.Data, orderItems.Data); 
-                }
-
-                return Ok(model);
-
+                return BadRequest(new Result(false,AspectMessages.InvalidRequest));
             }
 
-            return Ok(model);
+            return Ok(result);
 
         }
     }

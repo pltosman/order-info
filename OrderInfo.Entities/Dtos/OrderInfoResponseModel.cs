@@ -12,13 +12,20 @@ namespace OrderInfo.Entities.Dtos
 
         public OrderResponseModel Order { get; set; }
 
-     
-
         public OrderInfoResponseModel()
         {
 
             Customer = new CustomerResponseModel();
             Order = new OrderResponseModel();
+        }
+
+        public OrderInfoResponseModel(CustomerDetailResponse customer)
+        {
+
+            if (customer != null)
+            {
+                Customer = new CustomerResponseModel(customer.FirstName, customer.LastName);
+            }
         }
 
 

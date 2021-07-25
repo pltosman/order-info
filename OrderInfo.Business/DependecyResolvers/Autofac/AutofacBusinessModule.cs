@@ -21,6 +21,8 @@ namespace OrderInfo.Business.DependecyResolvers.Autofac
 
             builder.RegisterType<CustomerDetailService>().As<ICustomerDetailService>();
 
+            builder.RegisterType<OrderInfoManager>().As<IOrderInfoService>();
+
         }
     }
 }
